@@ -3,6 +3,7 @@ require "yaml"
 def load_library(file_path)
   emoticons = YAML.load_file(file_path)
   puts emoticons
+  puts "================================================================"
   result = emoticons.reduce({:get_meaning = [], :get_emoticon = []}) { |pair| puts pair }
   
 end
