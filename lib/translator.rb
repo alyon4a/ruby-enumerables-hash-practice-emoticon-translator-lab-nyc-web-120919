@@ -5,7 +5,7 @@ def load_library(file_path)
   puts emoticons
   puts "================================================================"
   result = emoticons.reduce({:get_meaning => [], :get_emoticon => []}) { |pair| puts pair }
-  
+  result
 end
 
 def get_japanese_emoticon(western_emoticon)
