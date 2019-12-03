@@ -8,13 +8,14 @@ def load_library(file_path)
     j_emoticon = value[1]
     memo[:get_meaning][j_emoticon] = key
     memo[:get_emoticon][w_emoticon] = j_emoticon
-    
     memo 
   end
   result
 end
 
-def get_japanese_emoticon(western_emoticon)
+def get_japanese_emoticon(file_path, emoticon)
+  library = load_library(file_path)
+  library[:get_japanese_emoticon][emoticon]
   
 end
 
