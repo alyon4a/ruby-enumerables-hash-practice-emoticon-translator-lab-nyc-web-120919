@@ -18,7 +18,7 @@ def get_japanese_emoticon(file_path, emoticon)
   
   j_emoticon = library[:get_emoticon][emoticon]
   
-  result = "Sorry, that emoticon was not found" if j_emoticon == nil
+  result = j_emoticon == nil ? "Sorry, that emoticon was not found" : j_emoticon
   result
 end
 
