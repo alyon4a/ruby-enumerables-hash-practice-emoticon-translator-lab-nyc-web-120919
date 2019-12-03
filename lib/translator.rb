@@ -4,7 +4,12 @@ def load_library(file_path)
   emoticons = YAML.load_file(file_path)
   puts emoticons
   puts "================================================================"
-  result = emoticons.reduce({:get_meaning => [], :get_emoticon => []}) { |pair| puts pair }
+  result = emoticons.reduce({:get_meaning => [], :get_emoticon => []}) do |memo, (key, value)|
+    p memo 
+    p key 
+    p value 
+    memo 
+  end
   result
 end
 
